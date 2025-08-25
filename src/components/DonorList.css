@@ -1,0 +1,67 @@
+.donor-list-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #dc3545; /* Bootstrap danger */
+}
+
+.donor-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.donor-table th,
+.donor-table td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.donor-table th {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.donor-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.donor-table tr:hover {
+  background-color: #ffe5e5;
+}
+.donor-list-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.donor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.donor-table th, .donor-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.donor-table th {
+  background-color: #dc3545;
+  color: white;
+}
+
+.donor-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.donor-table tr:hover {
+  background-color: #f1f1f1;
+}
