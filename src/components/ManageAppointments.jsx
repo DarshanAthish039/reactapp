@@ -12,7 +12,7 @@ const ManageAppointments = ({ userId }) => {
   const [submittedFeedbacks, setSubmittedFeedbacks] = useState([]); 
   const navigate = useNavigate();
 
-  const BASE_URL = "http://localhost:8080/appointments";
+  const BASE_URL = "https://springapp-314t.onrender.com/appointments";
 
   // Fetch upcoming appointments
   const fetchAppointments = async (id) => {

@@ -718,7 +718,7 @@ const DonorList = () => {
   // Fetch donors from backend
   const fetchDonors = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/users/donors'); // backend GET endpoint
+      const res = await axios.get('https://springapp-314t.onrender.com/api/users/donors'); // backend GET endpoint
       setDonors(res.data);
     } catch (err) {
       console.error('Error fetching donors:', err);
@@ -735,7 +735,7 @@ const DonorList = () => {
     if (!window.confirm('Are you sure you want to delete this donor?')) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/users/${id}`); // backend DELETE endpoint
+      await axios.delete(`https://springapp-314t.onrender.com/api/users/${id}`); // backend DELETE endpoint
       setDonors(prev => prev.filter(d => d.id !== id)); // remove from state immediately
       alert('Donor deleted successfully');
     } catch (err) {

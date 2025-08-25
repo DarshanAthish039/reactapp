@@ -31,14 +31,14 @@ const DonationCenters = () => {
  const fetchCenters = async (query = "") => {
   try {
     setLoading(true);
-    let url = "http://localhost:8080/api/donationCenters";
+    let url = "https://springapp-314t.onrender.com/api/donationCenters";
 
     if (query) {
       // check if query is number -> assume pincode
       if (/^\d+$/.test(query)) {
-        url = `http://localhost:8080/api/donationCenters/search/pincode?pincode=${query}`;
+        url = `https://springapp-314t.onrender.com/api/donationCenters/search/pincode?pincode=${query}`;
       } else {
-        url = `http://localhost:8080/api/donationCenters/search/city?city=${query}`;
+        url = `https://springapp-314t.onrender.com/api/donationCenters/search/city?city=${query}`;
       }
     }
 

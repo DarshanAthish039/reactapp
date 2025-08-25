@@ -331,7 +331,7 @@ const DonorDashboard = () => {
   const fetchBloodStock = async () => {
     try {
       const stockRes = await axios.get(
-        "http://localhost:8080/api/bloodstock/status/by-city?city=Chennai"
+        "https://springapp-314t.onrender.com/api/bloodstock/status/by-city?city=Chennai"
       );
       setBloodStock(stockRes.data);
     } catch (error) {
@@ -355,7 +355,7 @@ const DonorDashboard = () => {
       // Next appointment
       try {
         const appointmentRes = await axios.get(
-          `http://localhost:8080/appointments/upcoming/${storedUser.id}`
+          `https://springapp-314t.onrender.com/appointments/upcoming/${storedUser.id}`
         );
         const appointmentData = appointmentRes.data[0];
         setNextAppointment(appointmentData);
@@ -367,14 +367,14 @@ const DonorDashboard = () => {
       // Fetch past appointments for health stats
       try {
         const pastRes = await axios.get(
-          `http://localhost:8080/appointments/history/${storedUser.id}`
+          `https://springapp-314t.onrender.com/appointments/history/${storedUser.id}`
         );
         const completedAppointments = pastRes.data.filter(app => app.status === "Completed");
         if (completedAppointments.length > 0) {
           // Take the latest completed appointment
           const latestCompleted = completedAppointments[completedAppointments.length - 1];
           const healthRes = await axios.get(
-            `http://localhost:8080/healthstats/${latestCompleted.id}`
+            `https://springapp-314t.onrender.com/healthstats/${latestCompleted.id}`
           );
           setHealthStats(healthRes.data || null);
         }
@@ -386,7 +386,7 @@ const DonorDashboard = () => {
       // Badges
       try {
         const badgeRes = await axios.get(
-          `http://localhost:8080/gamification/${storedUser.id}`
+          `https://springapp-314t.onrender.com/gamification/${storedUser.id}`
         );
         setBadgeData(badgeRes.data);
       } catch (err) {
@@ -397,7 +397,7 @@ const DonorDashboard = () => {
       // Upcoming campaigns
       try {
         const campaignRes = await axios.get(
-          `http://localhost:8080/api/donationCamps/upcoming`
+          `https://springapp-314t.onrender.com/api/donationCamps/upcoming`
         );
         setUpcomingCampaigns(campaignRes.data);
       } catch (err) {
@@ -408,7 +408,7 @@ const DonorDashboard = () => {
       // Urgent requests
       try {
         const urgentRes = await axios.get(
-          `http://localhost:8080/urgent-requests/all`
+          `https://springapp-314t.onrender.com/urgent-requests/all`
         );
         setUrgentRequests(urgentRes.data);
       } catch (err) {

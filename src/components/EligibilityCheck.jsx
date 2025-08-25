@@ -34,7 +34,7 @@ const EligibilityCheck = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8080/api/users/eligibility-check', {
+      const response = await fetch('https://springapp-314t.onrender.com/api/users/eligibility-check', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

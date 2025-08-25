@@ -14,7 +14,7 @@ const Profile = () => {
   useEffect(() => {
     if (!userId) return;
 
-    axios.get(`http://localhost:8080/api/users/${userId}`)
+    axios.get(`https://springapp-314t.onrender.com/api/users/${userId}`)
       .then(res => {
         setUser(res.data);
         setFormData(res.data);
@@ -27,7 +27,7 @@ const Profile = () => {
   };
 
   const handleSave = () => {
-    axios.put(`http://localhost:8080/api/users/${userId}`, formData)
+    axios.put(`https://springapp-314t.onrender.com/api/users/${userId}`, formData)
       .then(res => {
         setUser(res.data);
         setIsEditing(false);

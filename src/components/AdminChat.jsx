@@ -10,7 +10,7 @@ const AdminChat = () => {
 
   useEffect(() => {
     // Connect to WebSocket backend
-    const socket = new SockJS("http://localhost:8080/ws");
+    const socket = new SockJS("https://springapp-314t.onrender.com/ws");
     const client = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000, // auto reconnect

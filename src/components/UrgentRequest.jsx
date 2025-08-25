@@ -176,7 +176,7 @@ const UrgentRequests = () => {
   const fetchUrgentRequests = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:8080/urgent-requests/all");
+      const res = await axios.get("https://springapp-314t.onrender.com/urgent-requests/all");
       setUrgentRequests(res.data || []);
     } catch (err) {
       setError("Failed to load urgent requests.");
@@ -194,7 +194,7 @@ const UrgentRequests = () => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:8080/urgent-requests/filter`,
+        `https://springapp-314t.onrender.com/urgent-requests/filter`,
         { params: { bloodGroup, location } }
       );
       setUrgentRequests(res.data || []);

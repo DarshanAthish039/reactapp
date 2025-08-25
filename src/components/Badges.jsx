@@ -12,7 +12,7 @@ const Badges = () => {
   useEffect(() => {
     if (!userId) return;
 
-    axios.get(`http://localhost:8080/gamification/${userId}`)
+    axios.get(`https://springapp-314t.onrender.com/gamification/${userId}`)
       .then(res => setGamification(res.data))
       .catch(err => console.error("Error fetching gamification:", err));
   }, [userId]);

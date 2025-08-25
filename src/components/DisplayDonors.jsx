@@ -9,7 +9,7 @@ const DisplayDonor = () => {
   // Fetch donors from backend
   const fetchDonors = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/users");
+      const response = await axios.get("https://springapp-314t.onrender.com/api/users");
       setDonors(response.data);
       setLoading(false);
     } catch (err) {

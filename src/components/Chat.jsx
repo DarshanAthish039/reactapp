@@ -11,7 +11,7 @@ const Chat = () => {
   const userId = localStorage.getItem("userId"); // get from local storage
 
   useEffect(() => {
-    const socket = new SockJS("http://localhost:8080/ws");
+    const socket = new SockJS("https://springapp-314t.onrender.com/ws");
     const stompClient = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000, // auto-reconnect

@@ -25,7 +25,7 @@ const FeedbackForm = () => {
     e.preventDefault();
     try {
       await axios.post(
-        `http://localhost:8080/feedbacks/${appointmentId}`,
+        `https://springapp-314t.onrender.com/feedbacks/${appointmentId}`,
         feedback,
         { headers: { "Content-Type": "application/json" } }
       );

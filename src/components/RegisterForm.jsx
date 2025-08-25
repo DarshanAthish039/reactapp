@@ -86,7 +86,7 @@ const RegisterForm = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/api/users/register', {
+      const response = await axios.post('https://springapp-314t.onrender.com/api/users/register', {
         fullName: formData.fullName,
         email: formData.email,
         password: formData.password,

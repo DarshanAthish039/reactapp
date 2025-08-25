@@ -19,7 +19,7 @@ const AppointmentForm = ({ userId, onClose, onSuccess }) => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("http://localhost:8080/appointments/book", {
+      await axios.post("https://springapp-314t.onrender.com/appointments/book", {
         userId,
         ...formData,
       });

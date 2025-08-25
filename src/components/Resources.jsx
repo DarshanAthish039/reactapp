@@ -6,7 +6,7 @@ const Resources = () => {
   const [resources, setResources] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const BASE_URL = "http://localhost:8080/resources"; // update to your actual endpoint
+  const BASE_URL = "https://springapp-314t.onrender.com/resources"; // update to your actual endpoint
 
   useEffect(() => {
     const fetchResources = async () => {

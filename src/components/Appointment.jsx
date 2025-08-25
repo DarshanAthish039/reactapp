@@ -24,7 +24,7 @@ const Appointment = () => {
   useEffect(() => {
     const fetchCenters = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/donationCenters');
+        const res = await axios.get('https://springapp-314t.onrender.com/api/donationCenters');
         setCenters(res.data);
       } catch {
         setErrors(prev => ({ ...prev, centers: 'Failed to load centers' }));

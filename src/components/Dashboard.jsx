@@ -35,7 +35,7 @@ const Dashboard = ({ userId }) => {
 
   const fetchCenters = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/donationCenters");
+      const res = await axios.get("https://springapp-314t.onrender.com/api/donationCenters");
       setCenters(res.data);
       setLoading(false);
     } catch (err) {
@@ -47,7 +47,7 @@ const Dashboard = ({ userId }) => {
   const searchByCity = async () => {
     if (!searchCity) return fetchCenters();
     try {
-      const res = await axios.get(`http://localhost:8080/api/donationCenters/search/city?city=${searchCity}`);
+      const res = await axios.get(`https://springapp-314t.onrender.com/api/donationCenters/search/city?city=${searchCity}`);
       setCenters(res.data);
     } catch (err) {
       console.error(err);
@@ -57,7 +57,7 @@ const Dashboard = ({ userId }) => {
   const searchByPincode = async () => {
     if (!searchPincode) return fetchCenters();
     try {
-      const res = await axios.get(`http://localhost:8080/api/donationCenters/search/pincode?pincode=${searchPincode}`);
+      const res = await axios.get(`https://springapp-314t.onrender.com/api/donationCenters/search/pincode?pincode=${searchPincode}`);
       setCenters(res.data);
     } catch (err) {
       console.error(err);

@@ -412,7 +412,7 @@ const BookAppointmentForm = ({ userId }) => {
   // Fetch donation centers on load
   useEffect(() => {
     axios
-      .get("http://localhost:8080/centers")
+      .get("https://springapp-314t.onrender.com/centers")
       .then((res) => setCenters(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -421,7 +421,7 @@ const BookAppointmentForm = ({ userId }) => {
   useEffect(() => {
     if (formData.centerId && formData.appointmentDate) {
       axios
-        .get("http://localhost:8080/appointments/available-slots", {
+        .get("https://springapp-314t.onrender.com/appointments/available-slots", {
           params: {
             centerId: formData.centerId,
             date: formData.appointmentDate,
@@ -443,7 +443,7 @@ const BookAppointmentForm = ({ userId }) => {
       return;
     }
     try {
-      await axios.post("http://localhost:8080/appointments/book", {
+      await axios.post("https://springapp-314t.onrender.com/appointments/book", {
         userId,
         ...formData,
       });
